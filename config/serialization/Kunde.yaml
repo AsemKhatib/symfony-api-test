@@ -1,0 +1,24 @@
+App\Entity\Kunde:
+  attributes:
+    id:
+      groups: ['kunde:read', 'user:read']
+    name:
+      groups: ['kunde:read', 'kunde:write', 'user:read']
+    vorname:
+      groups: ['kunde:read', 'kunde:write', 'user:read']
+    firma:
+      groups: ['kunde:read', 'kunde:write', 'user:read']
+    geburtsdatum:
+      groups: ['kunde:read', 'kunde:write', 'user:read']
+    geloescht:
+      groups: ['kunde:write']
+    geschlecht:
+      groups: ['kunde:read', 'kunde:write']
+    email:
+      groups: ['kunde:read', 'kunde:write', 'user:read']
+    vermittlerId:
+      groups: ['kunde:read', 'user:read']
+    adressen:
+      groups: ['kunde:read']
+    user:
+      groups: ['kunde:read']
