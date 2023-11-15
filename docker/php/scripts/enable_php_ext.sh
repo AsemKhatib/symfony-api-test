@@ -25,6 +25,6 @@ docker-php-ext-enable \
     xsl \
     zip
 
-pecl install xdebug
+pecl install xdebug-3.2.2
 
 docker-php-ext-enable xdebug
