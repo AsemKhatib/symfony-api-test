@@ -1,0 +1,56 @@
+resources:
+  App\Entity\Security\User:
+#      uriTemplate: /kunden/{id}/user
+#      uriVariable:
+#        id:
+#          fromClass: App\Entity\Question
+#          fromProperty: answer
+#      operations:
+#        ApiPlatform\Metadata\Get: ~
+    operations:
+      ApiPlatform\Metadata\Post:
+        uriTemplate: '/user'
+      ApiPlatform\Metadata\GetCollection:
+        uriTemplate: '/user'
+      ApiPlatform\Metadata\Get:
+        uriTemplate: '/user/{id}'
+      ApiPlatform\Metadata\Put:
+        uriTemplate: '/user/{id}'
+      ApiPlatform\Metadata\Delete:
+        uriTemplate: '/user/{id}'
+    normalizationContext:
+      groups: ['user:read', 'kunde:read']
+    denormalizationContext:
+      groups: ['user:write', 'kunde:write']
+  App\Entity\Kunde:
+    operations:
+      ApiPlatform\Metadata\Post:
+        uriTemplate: '/kunden'
+      ApiPlatform\Metadata\GetCollection:
+        uriTemplate: '/kunden'
+      ApiPlatform\Metadata\Get:
+        uriTemplate: '/kunden/{id}'
+      ApiPlatform\Metadata\Put:
+        uriTemplate: '/kunden/{id}'
+      ApiPlatform\Metadata\Delete:
+        uriTemplate: '/kunden/{id}'
+    normalizationContext:
+      groups: ['kunde:read', 'user:read']
+    denormalizationContext:
+      groups: ['kunde:write', 'user:write']
+  App\Entity\Adresse:
+    operations:
+      ApiPlatform\Metadata\Post:
+        uriTemplate: '/adressen'
+      ApiPlatform\Metadata\GetCollection:
+        uriTemplate: '/adressen'
+      ApiPlatform\Metadata\Get:
+        uriTemplate: '/adressen/{id}'
+      ApiPlatform\Metadata\Put:
+        uriTemplate: '/adressen/{id}'
+      ApiPlatform\Metadata\Delete:
+        uriTemplate: '/adressen/{id}'
+    normalizationContext:
+      groups: [ 'adresse:read']
+    denormalizationContext:
+      groups: [ 'adresse:write']
