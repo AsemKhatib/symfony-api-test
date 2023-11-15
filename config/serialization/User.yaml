@@ -1,0 +1,12 @@
+App\Entity\Security\User:
+  attributes:
+    id:
+      groups: ['user:read']
+    email:
+      groups: ['user:read', 'user:write', 'kunde:read']
+    passwd:
+      groups: ['user:write']
+    aktiv:
+      groups: ['user:read', 'user:write', 'kunde:read']
+    last_login:
+      groups: ['user:read', 'kunde:read']
