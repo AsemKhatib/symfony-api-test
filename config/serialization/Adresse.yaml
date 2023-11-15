@@ -1,0 +1,14 @@
+App\Entity\Adresse:
+  attributes:
+    id:
+      groups: ['adresse:read', 'adresse:write']
+    strasse:
+      groups: ['adresse:read', 'adresse:write', 'kunde:read']
+    plz:
+      groups: ['adresse:read', 'adresse:write', 'kunde:read']
+    ort:
+      groups: ['adresse:read', 'adresse:write', 'kunde:read']
+    bundesland:
+      groups: ['adresse:read', 'adresse:write', 'kunde:read']
+#    details:
+#      groups: ['kunde:read']
