@@ -1,7 +1,5 @@
 App\Entity\Adresse:
   attributes:
-    id:
-      groups: ['adresse:read', 'adresse:write']
     strasse:
       groups: ['adresse:read', 'adresse:write', 'kunde:read']
     plz:
@@ -10,5 +8,5 @@ App\Entity\Adresse:
       groups: ['adresse:read', 'adresse:write', 'kunde:read']
     bundesland:
       groups: ['adresse:read', 'adresse:write', 'kunde:read']
-#    details:
-#      groups: ['kunde:read']
+    details:
+      groups: ['adresse:read', 'kunde:read']

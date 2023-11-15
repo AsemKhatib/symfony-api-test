@@ -1,9 +1,9 @@
 App\Entity\KundeAdresse:
   attributes:
     kunde_id:
-      groups: ['kundeAdresse:write']
+      groups: ['kundeAdresse:write', 'adresse:write']
     adresse_id:
-      groups: ['kundeAdresse:write']
+      groups: ['kundeAdresse:write', 'adresse:write']
     geschaeftlich:
       groups: ['kundeAdresse:read', 'kundeAdresse:write', 'adresse:read', 'adresse:write', 'kunde:read']
     rechnungsadresse:

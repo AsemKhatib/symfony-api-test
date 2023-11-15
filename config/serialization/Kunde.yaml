@@ -17,7 +17,7 @@ App\Entity\Kunde:
     email:
       groups: ['kunde:read', 'kunde:write', 'user:read']
     vermittlerId:
-      groups: ['kunde:read', 'user:read']
+      groups: ['kunde:read', 'kunde:write', 'user:read']
     adressen:
       groups: ['kunde:read']
     user:
