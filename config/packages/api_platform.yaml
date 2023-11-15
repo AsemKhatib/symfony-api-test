@@ -1,7 +1,15 @@
 api_platform:
     mapping:
-        paths: ['%kernel.project_dir%/src/Entity']
+        paths:
+            - '%kernel.project_dir%/src/Entity'
+            - '%kernel.project_dir%/config/api_platform'
     patch_formats:
         json: ['application/merge-patch+json']
+    enable_swagger: true
+    enable_swagger_ui: true
     swagger:
         versions: [3]
+        api_keys:
+            apiKeyName:
+                name: 'Authorization'
+                type: 'header'
